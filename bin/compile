@@ -23,5 +23,5 @@ function export_env_vars() {
 }
 
 export_env_vars
-echo "Deploy started! Notifying Slack ($SLACK_WEBHOOK)"
-curl -X POST -H 'Content-type: application/json' --data "{\"icon_emoji\": \"$SLACK_ICON\", \"username\": \"$SLACK_USERNAME\", \"channel\": \"$SLACK_CHANNEL\", \"text\":\"Starting deploy (sha: $SOURCE_VERSION)\"}" $SLACK_WEBHOOK
+echo "Deploy finished! Notifying Slack ($SLACK_WEBHOOK)"
+curl -X POST -H 'Content-type: application/json' --data "{\"icon_emoji\": \"$SLACK_ICON\", \"username\": \"$SLACK_USERNAME\", \"channel\": \"$SLACK_CHANNEL\", \"text\":\"Finished deploy (sha: $SOURCE_VERSION)\"}" $SLACK_WEBHOOK
